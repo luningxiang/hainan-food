@@ -1,1 +1,121 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Catalog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+    }
+    header {
+      background: #ff7043;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card-content h3 {
+      margin: 0 0 10px;
+      color: #333;
+    }
+    .card-content p {
+      color: #666;
+      font-size: 14px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🍽️ Delicious Food Catalog</h1>
+    <p>Explore our tasty dishes</p>
+  </header>
+
+  <section class="container">
+    <!-- Food Item 1 -->
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?pizza" alt="Pizza">
+      <div class="card-content">
+        <h3>Cheese Pizza</h3>
+        <p>Classic cheesy goodness with a crispy crust.</p>
+      </div>
+    </div>
+
+    <!-- Food Item 2 -->
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?burger" alt="Burger">
+      <div class="card-content">
+        <h3>Beef Burger</h3>
+        <p>Juicy grilled beef patty with fresh veggies.</p>
+      </div>
+    </div>
+
+    <!-- Food Item 3 -->
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?pasta" alt="Pasta">
+      <div class="card-content">
+        <h3>Creamy Pasta</h3>
+        <p>Rich and creamy Italian-style pasta.</p>
+      </div>
+    </div>
+
+    <!-- Food Item 4 -->
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?sushi" alt="Sushi">
+      <div class="card-content">
+        <h3>Fresh Sushi</h3>
+        <p>Delicate rolls made with fresh ingredients.</p>
+      </div>
+    </div>
+
+    <!-- Food Item 5 -->
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?salad" alt="Salad">
+      <div class="card-content">
+        <h3>Healthy Salad</h3>
+        <p>A mix of fresh greens and tangy dressing.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Food Catalog. All rights reserved.
+  </footer>
+
+</body>
+</html>
