@@ -50,3 +50,11 @@ footer {
   background: #333;
   color: white;
 }
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 300px; /* Limit banner height */
+  object-fit: cover;
+  border-bottom: 5px solid #ff7043; /* Optional: add a nice border */
+}
