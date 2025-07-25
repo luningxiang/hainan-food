@@ -13,9 +13,12 @@ header {
 }
 header h1, 
 header p {
-  position: relative; /* keep text above overlay */
-  z-index: 1;
-  margin: 0;
+  position: relative;
+  z-index: 1;       /* Keep text above banner */
+  color: white;     /* Main font color */
+  -webkit-text-stroke: 2px purple; /* Purple outline */
+  text-stroke: 2px purple;         /* For other browsers */
+  font-weight: bold;
 }
 .container {
   display: grid;
