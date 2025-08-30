@@ -47,24 +47,23 @@ const menu = [
 const menuContainer = document.getElementById('menu');
 const categoryButtons = document.querySelectorAll('#category-menu button');
 
-// Function to render menu items by category
+// Render menu items based on category
 function renderMenu(category) {
   menuContainer.innerHTML = '';
   let filteredMenu = menu;
-  if (category && category !== 'all') {
-    filteredMenu = menu.filter(item => item.category === category);
-  }
+  if (category && category !== 'all') filteredMenu = menu.filter(item => item.category === category);
+
   filteredMenu.forEach(item => {
     const div = document.createElement('div');
     div.className = 'food-item';
     div.innerHTML = `
       <img src="${item.image}" alt="${item.name}">
       <div class="food-details">
-        <h3>${item.name}<br/>${item.name2}</h3>
+        <h3>${item.name}</h3>
         <p>${item.price}</p>
       </div>
     `;
-    // Click anywhere on the card
+    // Click anywhere on the card to open modal
     div.addEventListener('click', () => openModal(item.image, item.name));
     menuContainer.appendChild(div);
   });
@@ -97,4 +96,3 @@ function openModal(imageSrc, caption) {
 closeBtn.onclick = () => modal.classList.remove('show');
 modal.onclick = (e) => { if (e.target === modal) modal.classList.remove('show'); };
 document.addEventListener('keydown', (e) => { if (e.key === "Escape") modal.classList.remove('show'); });
-
