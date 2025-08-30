@@ -1,39 +1,12 @@
-/* Banner Title */
-.banner h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 52px;
-  color: #4b007f;  /* solid purple */
-  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8); /* softer white glow */
-  letter-spacing: 2px;
-  text-align: center;
-  font-family: 'KaiTi', 'STKaiti', serif; /* Chinese default */
-}
-
-/* Force English in title to be modern sans-serif */
-.banner h1:lang(en) {
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
-}
-
-/* Smaller screens adjust */
-@media (max-width: 480px) {
-  .banner h1 {
-    font-size: 34px;
-    letter-spacing: 1px;
-  }
-}
-
 /* Body & background */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #e6d6f0; /* light purple */
+  background: #e6d6f0;
   color: #333;
 }
 
-/* Banner container */
+/* Banner */
 .banner {
   position: relative;
   width: 100%;
@@ -47,6 +20,27 @@ body {
   height: 100%;
   object-fit: cover;
   filter: brightness(70%);
+}
+
+/* Banner title */
+.banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 52px;
+  color: #4b007f;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.banner h1 span[lang="zh"] {
+  font-family: 'KaiTi', 'STKaiti', serif;
+}
+
+.banner h1 span[lang="en"] {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Category Menu */
@@ -67,7 +61,14 @@ body {
   font-size: 16px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  font-family: 'KaiTi', 'STKaiti', serif, 'Poppins', sans-serif;
+}
+
+.category-menu button span[lang="zh"] {
+  font-family: 'KaiTi', 'STKaiti', serif;
+}
+
+.category-menu button span[lang="en"] {
+  font-family: 'Poppins', sans-serif;
 }
 
 .category-menu button:hover,
@@ -131,13 +132,11 @@ body {
   color: #4b007f;
 }
 
-/* Apply KaiTi to Chinese only */
-.food-details h3:lang(zh) {
+.food-details h3 span[lang="zh"] {
   font-family: 'KaiTi', 'STKaiti', serif;
 }
 
-/* Apply clean font to English only */
-.food-details h3:lang(en) {
+.food-details h3 span[lang="en"] {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -202,7 +201,7 @@ body {
   cursor: pointer;
 }
 
-/* Responsive for small screens */
+/* Responsive */
 @media (max-width: 480px) {
   .food-item {
     flex: 1 1 100%;
