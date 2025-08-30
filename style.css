@@ -1,13 +1,18 @@
+/* Menu container */
 #menu {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
+  padding: 20px;
 }
 
+/* Food item card */
 .food-item {
-  width: 200px;
-  cursor: pointer;
+  flex: 1 1 200px;
+  max-width: 250px;
   text-align: center;
+  cursor: pointer;
 }
 
 .food-item img {
@@ -44,8 +49,8 @@
 .modal-content {
   margin: auto;
   display: block;
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 90%;
+  max-height: 90%;
   border-radius: 10px;
   transform: scale(0.7);
   transition: transform 0.4s ease;
@@ -55,6 +60,15 @@
   transform: scale(1);
 }
 
+/* Caption */
+#caption {
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Close button */
 .close {
   position: absolute;
   top: 20px;
@@ -63,4 +77,16 @@
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
+  .food-item {
+    flex: 1 1 100%;
+  }
+
+  .modal-content {
+    max-width: 95%;
+    max-height: 80%;
+  }
 }
