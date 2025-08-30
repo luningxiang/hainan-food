@@ -22,23 +22,18 @@ body {
   filter: brightness(90%);
 }
 
-/* Banner title with sharp futuristic shimmer */
+/* Banner title with solid purple */
 .banner h1 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 36px; /* desktop */
-  line-height: 1.1; /* tighter spacing for multi-line */
+  line-height: 1.1;
   letter-spacing: 1.5px;
   text-align: center;
   font-weight: bold;
-
-  /* Gradient shimmer */
-  background: linear-gradient(90deg, #6a2dbf, #a663f7, #6a2dbf);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 3s infinite linear;
+  color: #4b007f; /* solid purple */
 }
 
 .banner h1 span[lang="zh"] {
@@ -47,12 +42,6 @@ body {
 
 .banner h1 span[lang="en"] {
   font-family: 'Poppins', sans-serif;
-}
-
-/* Shimmer animation */
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
 }
 
 /* Category Menu */
