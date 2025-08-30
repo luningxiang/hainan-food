@@ -59,7 +59,7 @@ function renderMenu(category) {
     div.innerHTML = `
       <img src="${item.image}" alt="${item.name}">
       <div class="food-details">
-        <h3>${item.name}</h3>
+        <h3>${item.name}<br/>${item.name2}</h3>
         <p>${item.price}</p>
       </div>
     `;
