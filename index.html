@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Food Menu</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Menu</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>🍜 Our Delicious Menu</h1>
-  </header>
 
-  <!-- Main content -->
-  <main id="menu" class="menu-container">
-    <!-- Food items will be injected by JavaScript -->
-  </main>
+<div id="menu"></div>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Food Catalog. All rights reserved.</p>
-  </footer>
+<!-- Modal for enlarged image -->
+<div id="modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img">
+  <div id="caption"></div>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
