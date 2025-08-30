@@ -6,8 +6,8 @@
   transform: translate(-50%, -50%);
   font-family: 'ZCOOL KuaiLe', cursive, sans-serif;
   font-size: 52px;
-  color: #c792f5;   /* light purple */
-  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9); /* white shadow */
+  color: #c792f5;  /* light purple */
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9); /* soft white shadow */
   letter-spacing: 2px;
   text-align: center;
 }
@@ -128,10 +128,12 @@ body {
   flex-grow: 1;
 }
 
+/* Menu item details */
 .food-details h3 {
   margin: 10px 0 5px;
   font-size: 18px;
-  color: #4b007f;
+  color: #4b007f; /* deep purple for contrast */
+  font-family: 'ZCOOL KuaiLe', cursive, sans-serif; /* playful Chinese font */
 }
 
 .food-details p {
@@ -139,6 +141,7 @@ body {
   font-size: 16px;
   color: #6a2dbf;
   font-weight: bold;
+  font-family: 'Poppins', sans-serif; /* keep price clean/modern */
 }
 
 /* Modal styles */
