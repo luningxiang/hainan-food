@@ -44,16 +44,6 @@ body {
   filter: brightness(70%);
 }
 
-.banner h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 48px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-}
-
 /* Category Menu */
 .category-menu {
   display: flex;
