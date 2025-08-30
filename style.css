@@ -28,9 +28,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 64px; /* increased from 52px */
+  font-size: 64px;
   color: #4b007f;
-  text-shadow: 0 0 5px #fff, 0 0 10px #c792f5, 0 0 20px #c792f5; /* soft glow */
+  text-shadow: 0 0 5px #fff, 0 0 10px #c792f5, 0 0 20px #c792f5;
   letter-spacing: 2px;
   text-align: center;
   background: linear-gradient(90deg, #4b007f, #c792f5, #4b007f);
@@ -124,8 +124,20 @@ body {
   transition: transform 0.4s ease;
 }
 
+/* Hover on desktop */
 .food-item:hover img {
   transform: scale(1.08);
+}
+
+/* Mobile touch scaling */
+@media (max-width: 480px) {
+  .food-item img {
+    transform: scale(1.05);
+  }
+
+  .food-item:active img {
+    transform: scale(1.08);
+  }
 }
 
 .food-details {
@@ -223,6 +235,6 @@ body {
   }
 
   .banner h1 {
-    font-size: 40px; /* increased from 32px */
+    font-size: 40px;
   }
 }
