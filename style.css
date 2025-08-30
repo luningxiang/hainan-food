@@ -1,15 +1,13 @@
-/* Elegant Bright Banner Title */
+/* Playful Relaxed Banner Title */
 .banner h1 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Playfair Display', serif;
+  font-family: 'ZCOOL KuaiLe', cursive, sans-serif;
   font-size: 52px;
-  background: linear-gradient(90deg, #b26bff, #d18aff, #f3c4ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0px 0px 12px rgba(255, 200, 255, 0.8);
+  color: #c792f5;   /* light purple */
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9); /* white shadow */
   letter-spacing: 2px;
   text-align: center;
 }
