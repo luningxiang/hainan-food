@@ -1,22 +1,46 @@
+/* Category Menu */
+.category-menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category-menu button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.category-menu button:hover,
+.category-menu button.active {
+  background-color: #f79e02;
+  color: #fff;
+}
+
 /* Menu container */
 #menu {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 
 /* Food item card */
 .food-item {
-  flex: 1 1 200px;       /* flexible width */
+  flex: 1 1 200px;
   max-width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff; /* card background */
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* card shadow */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -29,6 +53,8 @@
 
 .food-item img {
   width: 100%;
+  height: 150px;
+  object-fit: cover;
   border-bottom: 1px solid #eee;
   transition: transform 0.3s;
 }
@@ -41,6 +67,7 @@
   padding: 15px;
   text-align: center;
   width: 100%;
+  flex-grow: 1;
 }
 
 .food-details h3 {
