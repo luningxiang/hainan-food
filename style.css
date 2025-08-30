@@ -6,7 +6,7 @@
   transform: translate(-50%, -50%);
   font-family: 'ZCOOL KuaiLe', cursive, sans-serif;
   font-size: 52px;
-  color: #c792f5;  /* light purple */
+  color: #4b007f;  /* light purple */
   text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9); /* soft white shadow */
   letter-spacing: 2px;
   text-align: center;
@@ -123,7 +123,7 @@ body {
   margin: 10px 0 5px;
   font-size: 18px;
   color: #4b007f; /* deep purple for contrast */
-  font-family: 'ZCOOL KuaiLe', cursive, sans-serif; /* playful Chinese font */
+  font-family: 'Poppins', sans-serif; /* keep price clean/modern */
 }
 
 .food-details p {
