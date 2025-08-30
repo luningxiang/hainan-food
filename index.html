@@ -3,12 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Responsive Food Menu</title>
+<title>Enhanced Food Menu</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <h1 style="text-align:center; margin-top:20px;">Food Menu</h1>
+
+<!-- Category Menu -->
+<div id="category-menu" class="category-menu">
+  <button data-category="all" class="active">All</button>
+  <button data-category="kuih">Kuih</button>
+  <button data-category="bao">Bao</button>
+  <button data-category="dessert">Dessert</button>
+</div>
+
 <div id="menu"></div>
 
 <!-- Modal for enlarged image -->
