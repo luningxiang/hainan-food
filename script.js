@@ -1,4 +1,4 @@
-// Example food items
+// Food items
 const menu = [
   {
     name: "海南薏粑 Hainanese Yi Bua",
@@ -32,6 +32,7 @@ const menu = [
   }
 ];
 
+// Generate menu items
 const menuContainer = document.getElementById('menu');
 
 menu.forEach(item => {
@@ -59,7 +60,7 @@ document.querySelectorAll('.food-item img').forEach(img => {
   };
 });
 
-// Close modal when clicking the "×" button
+// Close modal when clicking the "×"
 closeBtn.onclick = () => {
   modal.classList.remove('show');
 };
@@ -70,4 +71,11 @@ modal.onclick = (e) => {
     modal.classList.remove('show');
   }
 };
+
+// Close modal when pressing "Esc" key
+document.addEventListener('keydown', (e) => {
+  if (e.key === "Escape") {
+    modal.classList.remove('show');
+  }
+});
 
