@@ -4,23 +4,26 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #e6d6f0;
   color: #333;
+  position: relative;
+  min-height: 100vh;
 }
 
-/* Bottom page background */
+/* Bottom page watermark background */
 body::after {
   content: "";
   display: block;
-  position: fixed; /* or absolute depending on your layout */
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 300px; /* adjust height as needed */
   background-image: url('img/background.jpg');
-  background-size: cover; /* or contain depending on the effect */
+  background-size: contain; /* ensures full image fits */
   background-position: center bottom;
   background-repeat: no-repeat;
-  z-index: 0; /* behind other content */
-  pointer-events: none; /* allows clicking through */
+  opacity: 0.1; /* watermark effect */
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Banner */
@@ -30,16 +33,17 @@ body::after {
   height: 250px;
   overflow: hidden;
   text-align: center;
+  z-index: 1; /* ensures above watermark */
 }
 
 .banner img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background-color: #e6d6f0; /* optional, shows background where image doesn't fill */
+  background-color: #e6d6f0; /* optional */
 }
 
-/* Banner title with solid purple + multi-layer glow */
+/* Banner title with solid purple + glow */
 .banner h1 {
   position: absolute;
   top: 40%;
@@ -50,13 +54,13 @@ body::after {
   letter-spacing: 1.5px;
   text-align: center;
   font-weight: bold;
-  color: #4b007f; /* solid purple */
+  color: #4b007f;
   text-shadow:
     0 0 3px #fff,
     0 0 6px #fff,
     0 0 9px #fff,
     0 0 12px #fff,
-    0 0 15px #fff; /* subtle glow layers */
+    0 0 15px #fff;
 }
 
 .banner h1 span[lang="zh"] {
@@ -255,6 +259,6 @@ body::after {
     text-shadow:
       1px 1px 3px #fff,
       1px 1px 6px #fff,
-      1px 1px 9px #fff; /* subtle glow for mobile */
+      1px 1px 9px #fff;
   }
 }
