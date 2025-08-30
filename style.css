@@ -39,9 +39,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 3s infinite linear;
-
-  /* subtle glow for readability */
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
 .banner h1 span[lang="zh"] {
