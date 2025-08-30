@@ -1,15 +1,15 @@
 // Food items
 const menu = [
   {
-    name: "海南薏粑 Hainanese Yi Bua",
+    name: "海南薏粑",
     name2: "Hainanese Yi Bua",
     price: "$1.60",
     image: "img/hainanKuih.jpg",
     category: "kuih"
   },
   {
-    name: "牛油馒头 Butter Buns",
-    name2: "Hainanese Yi Bua",
+    name: "牛油馒头",
+    name2: "Butter Buns",
     price: "$1.60",
     image: "img/mantou.jpg",
     category: "bao"
