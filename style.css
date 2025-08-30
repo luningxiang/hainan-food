@@ -1,70 +1,92 @@
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f8f8f8;
+  background: #fafafa;
+  color: #333;
 }
+
+/* Header */
 header {
-  background: url('mudan-banner.jpg') center/cover no-repeat;
-  color: white;
   text-align: center;
-  padding: 80px 20px; /* Taller header to show the banner nicely */
-  position: relative;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: white;
+  font-size: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-header h1, 
-header p {
-  position: relative;
-  z-index: 1;       /* Keep text above banner */
-  color: white;     /* Main font color */
-  -webkit-text-stroke: 2px purple; /* Purple outline */
-  text-stroke: 2px purple;         /* For other browsers */
-  font-weight: bold;
-}
-.container {
+
+/* Menu Container */
+.menu-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
+  gap: 1.5rem;
+  padding: 2rem;
+  animation: fadeIn 1.5s ease;
 }
-.card {
+
+/* Menu Item Card */
+.menu-item {
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 15px;
   overflow: hidden;
-  transition: transform 0.2s;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
-.card:hover {
-  transform: scale(1.05);
+
+.menu-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
-.card img {
+
+/* Food Image */
+.menu-item img {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  display: block;
 }
-.card-content {
-  padding: 15px;
+
+/* Food Info */
+.menu-info {
+  padding: 1rem;
+  text-align: center;
 }
-.card-content h3 {
-  margin: 0 0 10px;
-  color: #333;
+
+.menu-info h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #444;
 }
-.card-content p {
-  color: #666;
-  font-size: 14px;
+
+.menu-info p {
+  margin: 0;
+  font-size: 1rem;
+  color: #888;
+  font-weight: bold;
 }
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 15px;
-  background: #333;
+  padding: 1rem;
+  background: #222;
   color: white;
+  margin-top: 2rem;
 }
-.banner {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-height: 300px; /* Limit banner height */
-  object-fit: cover;
-  border-bottom: 5px solid #ff7043; /* Optional: add a nice border */
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
