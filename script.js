@@ -37,15 +37,6 @@ const menu = [
     category: "dessert"
   }
 ];
-// Food menu data with category
-const menu = [
-  { name: "Kuih Lapis", price: "$3.50", image: "img/kuih1.jpg", category: "kuih" },
-  { name: "Ang Ku Kuih", price: "$4.00", image: "img/kuih2.jpg", category: "kuih" },
-  { name: "Char Siu Bao", price: "$5.50", image: "img/bao1.jpg", category: "bao" },
-  { name: "Lotus Seed Bao", price: "$5.00", image: "img/bao2.jpg", category: "bao" },
-  { name: "Mango Pudding", price: "$6.50", image: "img/dessert1.jpg", category: "dessert" },
-  { name: "Egg Tart", price: "$4.50", image: "img/dessert2.jpg", category: "dessert" }
-];
 
 const menuContainer = document.getElementById('menu');
 const categoryButtons = document.querySelectorAll('#category-menu button');
