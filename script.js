@@ -98,3 +98,16 @@ function openModal(imageSrc, caption) {
 closeBtn.onclick = () => modal.classList.remove('show');
 modal.onclick = (e) => { if (e.target === modal) modal.classList.remove('show'); };
 document.addEventListener('keydown', (e) => { if (e.key === "Escape") modal.classList.remove('show'); });
+
+// Optional: mobile touch hover mimic
+const foodItems = document.querySelectorAll('.food-item');
+foodItems.forEach(item => {
+  item.addEventListener('touchstart', () => {
+    const img = item.querySelector('img');
+    img.style.transform = 'scale(1.08)';
+  });
+  item.addEventListener('touchend', () => {
+    const img = item.querySelector('img');
+    img.style.transform = 'scale(1.05)';
+  });
+});
