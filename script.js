@@ -43,11 +43,20 @@ const menu = [
     category: "dessert"
   }
 ];
+// Food menu data
+const menu = [
+  { name_zh: "千层糕", name_en: "Kuih Lapis", price: "$3.50", image: "img/kuih1.jpg", category: "kuih" },
+  { name_zh: "红豆糕", name_en: "Red Bean Cake", price: "$4.00", image: "img/kuih2.jpg", category: "kuih" },
+  { name_zh: "叉烧包", name_en: "Char Siu Bao", price: "$5.50", image: "img/bao1.jpg", category: "bao" },
+  { name_zh: "莲蓉包", name_en: "Lotus Seed Bao", price: "$5.00", image: "img/bao2.jpg", category: "bao" },
+  { name_zh: "芒果布丁", name_en: "Mango Pudding", price: "$6.50", image: "img/dessert1.jpg", category: "dessert" },
+  { name_zh: "蛋挞", name_en: "Egg Tart", price: "$4.50", image: "img/dessert2.jpg", category: "dessert" }
+];
 
 const menuContainer = document.getElementById('menu');
 const categoryButtons = document.querySelectorAll('#category-menu button');
 
-// Render menu items based on category
+// Render menu items
 function renderMenu(category) {
   menuContainer.innerHTML = '';
   let filteredMenu = menu;
@@ -57,14 +66,16 @@ function renderMenu(category) {
     const div = document.createElement('div');
     div.className = 'food-item';
     div.innerHTML = `
-      <img src="${item.image}" alt="${item.name}">
+      <img src="${item.image}" alt="${item.name_en}">
       <div class="food-details">
-        <h3>${item.name}<br/>${item.name2}</h3>
+        <h3>
+          <span lang="zh">${item.name_zh}</span> <br/>
+          <span lang="en">${item.name_en}</span>
+        </h3>
         <p>${item.price}</p>
       </div>
     `;
-    // Click anywhere on the card to open modal
-    div.addEventListener('click', () => openModal(item.image, item.name));
+    div.addEventListener('click', () => openModal(item.image, `${item.name_zh} ${item.name_en}`));
     menuContainer.appendChild(div);
   });
 }
