@@ -22,22 +22,26 @@ body {
   filter: brightness(90%);
 }
 
-/* Banner title with futuristic shimmer */
+/* Banner title with sharp futuristic shimmer */
 .banner h1 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 36px; /* decreased from 44px */
+  font-size: 36px; /* desktop */
   line-height: 1.1; /* tighter spacing for multi-line */
-  color: #4b007f;
-  text-shadow: 0 0 5px #fff, 0 0 10px #c792f5, 0 0 20px #c792f5;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-align: center;
-  background: linear-gradient(90deg, #4b007f, #c792f5, #4b007f);
+  font-weight: bold;
+
+  /* Gradient shimmer */
+  background: linear-gradient(90deg, #6a2dbf, #a663f7, #6a2dbf);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 3s infinite linear;
+
+  /* subtle glow for readability */
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
 .banner h1 span[lang="zh"] {
@@ -236,7 +240,8 @@ body {
   }
 
   .banner h1 {
-    font-size: 28px; /* decreased from 40px */
-    line-height: 1.1; /* tighter spacing for small screens */
+    font-size: 28px; /* mobile */
+    line-height: 1.1;
+    letter-spacing: 1px;
   }
 }
