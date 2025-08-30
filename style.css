@@ -22,19 +22,24 @@ body {
   filter: brightness(90%);
 }
 
-/* Banner title with solid purple */
+/* Banner title with solid purple + multi-layer glow */
 .banner h1 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 36px; /* desktop */
+  font-size: 36px;
   line-height: 1.1;
   letter-spacing: 1.5px;
   text-align: center;
   font-weight: bold;
   color: #4b007f; /* solid purple */
-  text-shadow: 4px 4px 4px rgba(255, 255, 255, 0.7); /* subtle white shadow */
+  text-shadow:
+    0 0 3px #fff,
+    0 0 6px #fff,
+    0 0 9px #fff,
+    0 0 12px #fff,
+    0 0 15px #fff; /* subtle glow layers */
 }
 
 .banner h1 span[lang="zh"] {
@@ -230,6 +235,9 @@ body {
     font-size: 28px;
     line-height: 1.1;
     letter-spacing: 1px;
-    text-shadow: 4px 4px 4px rgba(255, 255, 255, 0.7); /* same subtle white shadow */
+    text-shadow:
+      1px 1px 3px #fff,
+      1px 1px 6px #fff,
+      1px 1px 9px #fff; /* subtle glow for mobile */
   }
 }
