@@ -28,7 +28,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 36px;
+  font-size: 40px;
   line-height: 1.1;
   letter-spacing: 1.5px;
   text-align: center;
@@ -65,7 +65,7 @@ body {
   color: #fff;
   cursor: pointer;
   border-radius: 30px;
-  font-size: 16px;
+  font-size: 18px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -147,7 +147,7 @@ body {
 /* Menu item names */
 .food-details h3 {
   margin: 10px 0 5px;
-  font-size: 18px;
+  font-size: 22px;
   color: #4b007f;
 }
 
@@ -162,7 +162,7 @@ body {
 /* Price */
 .food-details p {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   color: #6a2dbf;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
@@ -207,7 +207,7 @@ body {
   text-align: center;
   color: #fff;
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .close {
@@ -232,7 +232,7 @@ body {
   }
 
   .banner h1 {
-    font-size: 28px;
+    font-size: 32px;
     line-height: 1.1;
     letter-spacing: 1px;
     text-shadow:
