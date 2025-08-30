@@ -1,5 +1,5 @@
 // Example food items
-const menuItems = [
+const menu = [
   {
     name: "海南薏粑 Hainanese Yi Bua",
     price: "$1.60",
@@ -32,20 +32,42 @@ const menuItems = [
   }
 ];
 
-// Render food items dynamically
-const menuContainer = document.getElementById("menu");
+const menuContainer = document.getElementById('menu');
 
-menuItems.forEach(item => {
-  const card = document.createElement("div");
-  card.classList.add("menu-item");
-
-  card.innerHTML = `
+menu.forEach(item => {
+  const div = document.createElement('div');
+  div.className = 'food-item';
+  div.innerHTML = `
     <img src="${item.image}" alt="${item.name}">
-    <div class="menu-info">
-      <h3>${item.name}</h3>
-      <p>${item.price}</p>
-    </div>
+    <h3>${item.name}</h3>
+    <p>${item.price}</p>
   `;
-
-  menuContainer.appendChild(card);
+  menuContainer.appendChild(div);
 });
+
+// Modal logic
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const captionText = document.getElementById("caption");
+const closeBtn = document.getElementsByClassName("close")[0];
+
+document.querySelectorAll('.food-item img').forEach(img => {
+  img.onclick = () => {
+    modal.classList.add('show');
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
+  };
+});
+
+// Close modal when clicking the "×" button
+closeBtn.onclick = () => {
+  modal.classList.remove('show');
+};
+
+// Close modal when clicking outside the image
+modal.onclick = (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('show');
+  }
+};
+
