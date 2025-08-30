@@ -1,14 +1,14 @@
 // Example food items
 const menuItems = [
   {
-    name: "Spaghetti Carbonara",
-    price: "$12.99",
-    image: "https://source.unsplash.com/600x400/?pasta"
+    name: "海南薏粑 Hainanese Yi Bua",
+    price: "$1.60",
+    image: "img/hainanKuih.jpg"
   },
   {
-    name: "Sushi Platter",
-    price: "$18.50",
-    image: "https://source.unsplash.com/600x400/?sushi"
+    name: "牛油馒头 Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg"
   },
   {
     name: "Cheeseburger",
