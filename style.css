@@ -34,6 +34,7 @@ body {
   text-align: center;
   font-weight: bold;
   color: #4b007f; /* solid purple */
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* subtle white shadow */
 }
 
 .banner h1 span[lang="zh"] {
@@ -226,8 +227,9 @@ body {
   }
 
   .banner h1 {
-    font-size: 28px; /* mobile */
+    font-size: 28px;
     line-height: 1.1;
     letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* same subtle white shadow */
   }
 }
