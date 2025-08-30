@@ -40,8 +40,10 @@ menu.forEach(item => {
   div.className = 'food-item';
   div.innerHTML = `
     <img src="${item.image}" alt="${item.name}">
-    <h3>${item.name}</h3>
-    <p>${item.price}</p>
+    <div class="food-details">
+      <h3>${item.name}</h3>
+      <p>${item.price}</p>
+    </div>
   `;
   menuContainer.appendChild(div);
 });
@@ -60,22 +62,20 @@ document.querySelectorAll('.food-item img').forEach(img => {
   };
 });
 
-// Close modal when clicking the "×"
 closeBtn.onclick = () => {
   modal.classList.remove('show');
 };
 
-// Close modal when clicking outside the image
 modal.onclick = (e) => {
   if (e.target === modal) {
     modal.classList.remove('show');
   }
 };
 
-// Close modal when pressing "Esc" key
 document.addEventListener('keydown', (e) => {
   if (e.key === "Escape") {
     modal.classList.remove('show');
   }
 });
+
 
