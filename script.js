@@ -1,56 +1,47 @@
 // Food items
 const menu = [
   {
-    name: "海南薏粑",
-    name2: "Hainanese Yi Bua",
+    name_zh: "海南薏粑",
+    name_en: "Hainanese Yi Bua",
     price: "$1.60",
     image: "img/hainanKuih.jpg",
     category: "kuih"
   },
   {
-    name: "牛油馒头",
-    name2: "Butter Buns",
+    name_zh: "牛油馒头",
+    name_en: "Butter Buns",
     price: "$1.60",
     image: "img/mantou.jpg",
     category: "bao"
   },
   {
-    name: "Cheeseburger",
-    name2: "",
+    name_zh: "Cheeseburger",
+    name_en: "",
     price: "$9.99",
     image: "https://source.unsplash.com/600x400/?burger",
     category: "bao"
   },
   {
-    name: "Caesar Salad",
-    name2: "",
+    name_zh: "Caesar Salad",
+    name_en: "",
     price: "$7.50",
     image: "https://source.unsplash.com/600x400/?salad",
     category: "bao"
   },
   {
-    name: "Pepperoni Pizza",
-    name2: "",
+    name_zh: "Pepperoni Pizza",
+    name_en: "",
     price: "$14.20",
     image: "https://source.unsplash.com/600x400/?pizza",
     category: "dessert"
   },
   {
-    name: "Ramen Noodles",
-    name2: "",
+    name_zh: "Ramen Noodles",
+    name_en: "",
     price: "$11.75",
     image: "https://source.unsplash.com/600x400/?ramen",
     category: "dessert"
   }
-];
-// Food menu data
-const menu = [
-  { name_zh: "千层糕", name_en: "Kuih Lapis", price: "$3.50", image: "img/kuih1.jpg", category: "kuih" },
-  { name_zh: "红豆糕", name_en: "Red Bean Cake", price: "$4.00", image: "img/kuih2.jpg", category: "kuih" },
-  { name_zh: "叉烧包", name_en: "Char Siu Bao", price: "$5.50", image: "img/bao1.jpg", category: "bao" },
-  { name_zh: "莲蓉包", name_en: "Lotus Seed Bao", price: "$5.00", image: "img/bao2.jpg", category: "bao" },
-  { name_zh: "芒果布丁", name_en: "Mango Pudding", price: "$6.50", image: "img/dessert1.jpg", category: "dessert" },
-  { name_zh: "蛋挞", name_en: "Egg Tart", price: "$4.50", image: "img/dessert2.jpg", category: "dessert" }
 ];
 
 const menuContainer = document.getElementById('menu');
