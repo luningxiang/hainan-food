@@ -22,17 +22,21 @@ body {
   filter: brightness(70%);
 }
 
-/* Banner title */
+/* Banner title with futuristic shimmer */
 .banner h1 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 52px;
+  font-size: 64px; /* increased from 52px */
   color: #4b007f;
-  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 5px #fff, 0 0 10px #c792f5, 0 0 20px #c792f5; /* soft glow */
   letter-spacing: 2px;
   text-align: center;
+  background: linear-gradient(90deg, #4b007f, #c792f5, #4b007f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
 }
 
 .banner h1 span[lang="zh"] {
@@ -41,6 +45,12 @@ body {
 
 .banner h1 span[lang="en"] {
   font-family: 'Poppins', sans-serif;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 /* Category Menu */
@@ -213,6 +223,6 @@ body {
   }
 
   .banner h1 {
-    font-size: 32px;
+    font-size: 40px; /* increased from 32px */
   }
 }
