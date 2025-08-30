@@ -28,7 +28,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 44px;
+  font-size: 36px; /* decreased from 44px */
+  line-height: 1.1; /* tighter spacing for multi-line */
   color: #4b007f;
   text-shadow: 0 0 5px #fff, 0 0 10px #c792f5, 0 0 20px #c792f5;
   letter-spacing: 2px;
@@ -235,6 +236,7 @@ body {
   }
 
   .banner h1 {
-    font-size: 40px;
+    font-size: 28px; /* decreased from 40px */
+    line-height: 1.1; /* tighter spacing for small screens */
   }
 }
