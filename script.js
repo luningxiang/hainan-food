@@ -339,6 +339,12 @@ categoryButtons.forEach(btn => {
     categoryButtons.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     renderMenu(btn.dataset.category);
+
+    // 🔽 scroll to top (with smooth animation)
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
 });
 
