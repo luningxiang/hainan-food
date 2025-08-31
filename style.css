@@ -220,4 +220,13 @@ body::after {
     letter-spacing: 1px;
     text-shadow: 0 0 4px #fff,0 0 8px #fff;
   }
+  .category-menu {
+    padding: 10px 15px;   /* top/bottom 10px, left/right 15px */
+    gap: 10px;            /* smaller gap between buttons */
+  }
+  .category-menu button {
+    flex: 1;              /* buttons auto-resize equally */
+    font-size: 16px;      /* slightly smaller text */
+    padding: 8px 10px;    /* smaller padding so it fits */
+  }
 }
