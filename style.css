@@ -93,7 +93,6 @@ body::after {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 20px;
   z-index: 1;
   position: sticky;
   top: 0;
