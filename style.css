@@ -4,11 +4,10 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #e6d6f0;
   color: #333;
-  position: relative;
   min-height: 100vh;
+  position: relative;
 }
 
-/* Bottom page watermark background */
 body::after {
   content: "";
   display: block;
@@ -32,20 +31,17 @@ body::after {
   top: 0;
   width: 100%;
   height: 180px;
-  background-image: url('img/banner.jpeg'); 
+  background-image: url('img/banner.jpeg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  text-align: center;
-  z-index: 20;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding-top: 40px;
+  z-index: 20;
 }
 
-/* Banner title with solid purple + glow */
 .banner h1 {
   margin: 0;
   font-size: 40px;
@@ -53,58 +49,33 @@ body::after {
   letter-spacing: 1.5px;
   font-weight: bold;
   color: #4b007f;
-  text-shadow:
-    0 0 3px #fff,
-    0 0 6px #fff,
-    0 0 9px #fff,
-    0 0 12px #fff,
-    0 0 15px #fff;
+  text-shadow: 0 0 3px #fff,0 0 6px #fff,0 0 9px #fff,0 0 12px #fff,0 0 15px #fff;
+  text-align: center;
 }
 
-.banner h1 span[lang="zh"] {
-  font-family: 'KaiTi', 'STKaiti', serif;
-}
+.banner h1 span[lang="zh"] { font-family: 'KaiTi', 'STKaiti', serif; }
+.banner h1 span[lang="en"] { font-family: 'Poppins', sans-serif; }
 
-.banner h1 span[lang="en"] {
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Menu Section wrapper */
+/* Menu Section */
 .menu-section {
   position: relative;
   padding-top: 20px;
   padding-bottom: 40px;
-  z-index: 0;
-  overflow: visible; /* needed for sticky to work */
+  overflow: visible;
+  background: linear-gradient(145deg, #fff, #f3e8ff); /* same as food items */
 }
 
-/* Watermark background behind menu */
-.menu-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  background-image: url('img/background.jpeg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.1;
-}
-
-/* Category Menu sticky */
+/* Sticky Category Menu */
 .category-menu {
   display: flex;
   justify-content: center;
   gap: 15px;
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.95); /* semi-transparent white */
+  background: inherit; /* match food items */
   padding: 10px 0;
-  z-index: 50; /* above everything else */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .category-menu button {
@@ -119,13 +90,8 @@ body::after {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.category-menu button span[lang="zh"] {
-  font-family: 'KaiTi', 'STKaiti', serif;
-}
-
-.category-menu button span[lang="en"] {
-  font-family: 'Poppins', sans-serif;
-}
+.category-menu button span[lang="zh"] { font-family: 'KaiTi', 'STKaiti', serif; }
+.category-menu button span[lang="en"] { font-family: 'Poppins', sans-serif; }
 
 .category-menu button:hover,
 .category-menu button.active {
@@ -142,7 +108,7 @@ body::after {
   padding: 40px 20px;
 }
 
-/* Food item card */
+/* Food Item */
 .food-item {
   flex: 1 1 200px;
   max-width: 250px;
@@ -157,9 +123,7 @@ body::after {
   transition: box-shadow 0.4s ease;
 }
 
-.food-item:hover {
-  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
-}
+.food-item:hover { box-shadow: 0 12px 24px rgba(0,0,0,0.3); }
 
 .food-item img {
   width: 100%;
@@ -169,21 +133,8 @@ body::after {
   transition: transform 0.4s ease;
 }
 
-.food-item:hover img {
-  transform: scale(1.08) translateY(-8px) rotate(-1deg);
-}
+.food-item:hover img { transform: scale(1.08) translateY(-8px) rotate(-1deg); }
 
-@media (max-width: 480px) {
-  .food-item img {
-    transform: scale(1.05);
-  }
-
-  .food-item:active img {
-    transform: scale(1.08);
-  }
-}
-
-/* Food details */
 .food-details {
   padding: 15px;
   text-align: center;
@@ -191,29 +142,13 @@ body::after {
   flex-grow: 1;
 }
 
-.food-details h3 {
-  margin: 10px 0 5px;
-  font-size: 22px;
-  color: #4b007f;
-}
+.food-details h3 { margin: 10px 0 5px; font-size: 22px; color: #4b007f; }
+.food-details h3 span[lang="zh"] { font-family: 'KaiTi', 'STKaiti', serif; }
+.food-details h3 span[lang="en"] { font-family: 'Poppins', sans-serif; }
 
-.food-details h3 span[lang="zh"] {
-  font-family: 'KaiTi', 'STKaiti', serif;
-}
+.food-details p { margin: 0; font-size: 18px; color: #6a2dbf; font-weight: bold; font-family: 'Poppins', sans-serif; }
 
-.food-details h3 span[lang="en"] {
-  font-family: 'Poppins', sans-serif;
-}
-
-.food-details p {
-  margin: 0;
-  font-size: 18px;
-  color: #6a2dbf;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Modal styles */
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -229,10 +164,7 @@ body::after {
   transition: opacity 0.4s ease;
 }
 
-.modal.show {
-  display: block;
-  opacity: 1;
-}
+.modal.show { display: block; opacity: 1; }
 
 .modal-content {
   margin: auto;
@@ -244,16 +176,9 @@ body::after {
   transition: transform 0.4s ease;
 }
 
-.modal.show .modal-content {
-  transform: scale(1);
-}
+.modal.show .modal-content { transform: scale(1); }
 
-#caption {
-  text-align: center;
-  color: #fff;
-  margin-top: 10px;
-  font-size: 20px;
-}
+#caption { text-align: center; color: #fff; margin-top: 10px; font-size: 20px; }
 
 .close {
   position: absolute;
@@ -267,26 +192,13 @@ body::after {
 
 /* Responsive */
 @media (max-width: 480px) {
-  .food-item {
-    flex: 1 1 100%;
-  }
-
-  .modal-content {
-    max-width: 95%;
-    max-height: 80%;
-  }
-
-  .banner {
-    height: 150px;
-  }
-
+  .food-item { flex: 1 1 100%; }
+  .modal-content { max-width: 95%; max-height: 80%; }
+  .banner { height: 150px; }
   .banner h1 {
     font-size: 32px;
     line-height: 1.1;
     letter-spacing: 1px;
-    text-shadow:
-      1px 1px 3px #fff,
-      1px 1px 6px #fff,
-      1px 1px 9px #fff;
+    text-shadow: 1px 1px 3px #fff,1px 1px 6px #fff,1px 1px 9px #fff;
   }
 }
