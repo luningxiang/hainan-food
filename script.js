@@ -304,7 +304,7 @@ const menu = [
 ];
 
 const menuContainer = document.getElementById('menu');
-const categoryButtons = document.querySelectorAll('#category-menu button');
+const categoryButtons = document.querySelectorAll('.category-menu button');
 
 // Render menu items
 function renderMenu(category) {
