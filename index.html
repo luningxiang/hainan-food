@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Futuristic Food Menu</title>
+  <title>露凝香美食阁</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts for Poppins -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,29 +18,37 @@
     </h1>
   </div>
 
-  <!-- Shared background wrapper -->
+  <!-- Menu Section -->
   <div class="menu-section">
     <!-- Category Menu -->
     <div class="category-menu" id="category-menu">
-      <button class="active" data-category="all">
-        <span lang="zh">全部</span> <span lang="en">All</span>
-      </button>
-      <button data-category="kuih">
-        <span lang="zh">糕点</span> <span lang="en">Kuih</span>
-      </button>
-      <button data-category="bao">
-        <span lang="zh">包子</span> <span lang="en">Bao</span>
-      </button>
-      <button data-category="dessert">
-        <span lang="zh">甜点</span> <span lang="en">Dessert</span>
-      </button>
+      <button class="active" data-category="all"><span lang="zh">全部</span> <span lang="en">All</span></button>
+      <button data-category="kuih"><span lang="zh">糕点</span> <span lang="en">Kuih</span></button>
+      <button data-category="bao"><span lang="zh">包子</span> <span lang="en">Bao</span></button>
+      <button data-category="dessert"><span lang="zh">甜点</span> <span lang="en">Dessert</span></button>
     </div>
-  
+
     <!-- Menu Items Container -->
-    <div id="menu"></div>
+    <div id="menu">
+      <!-- Example Food Items -->
+      <div class="food-item">
+        <img src="img/food1.jpg" alt="Food 1">
+        <div class="food-details">
+          <h3><span lang="zh">包子</span> <span lang="en">Bao</span></h3>
+          <p>$3.00</p>
+        </div>
+      </div>
+      <div class="food-item">
+        <img src="img/food2.jpg" alt="Food 2">
+        <div class="food-details">
+          <h3><span lang="zh">糕点</span> <span lang="en">Kuih</span></h3>
+          <p>$2.50</p>
+        </div>
+      </div>
+    </div>
   </div>
-  
-  <!-- Modal for image enlarge -->
+
+  <!-- Modal -->
   <div id="modal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="modal-img">
