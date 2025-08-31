@@ -76,7 +76,7 @@ body::after {
 /* Category Menu (sticky below banner) */
 .category-menu {
   position: sticky;
-  top: 250px; /* same as banner height */
+  top: 200px; /* same as banner height */
   display: flex;
   justify-content: center;
   gap: 15px;
