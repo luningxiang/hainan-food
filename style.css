@@ -45,7 +45,7 @@ body::after {
   padding-top: 40px;
 }
 
-/* Banner title */
+/* Banner title with solid purple + glow */
 .banner h1 {
   margin: 0;
   font-size: 40px;
@@ -53,22 +53,32 @@ body::after {
   letter-spacing: 1.5px;
   font-weight: bold;
   color: #4b007f;
-  text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #fff, 0 0 15px #fff;
+  text-shadow:
+    0 0 3px #fff,
+    0 0 6px #fff,
+    0 0 9px #fff,
+    0 0 12px #fff,
+    0 0 15px #fff;
 }
 
-.banner h1 span[lang="zh"] { font-family: 'KaiTi', 'STKaiti', serif; }
-.banner h1 span[lang="en"] { font-family: 'Poppins', sans-serif; }
+.banner h1 span[lang="zh"] {
+  font-family: 'KaiTi', 'STKaiti', serif;
+}
 
-/* Menu Section wrapper for watermark */
+.banner h1 span[lang="en"] {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Menu Section wrapper */
 .menu-section {
   position: relative;
   padding-top: 20px;
   padding-bottom: 40px;
-  z-index: 10;
-  overflow: visible; /* sticky works now */
+  z-index: 0;
+  overflow: visible; /* needed for sticky to work */
 }
 
-/* Watermark background (behind menu items) */
+/* Watermark background behind menu */
 .menu-section::before {
   content: "";
   position: absolute;
@@ -78,6 +88,10 @@ body::after {
   height: 100%;
   z-index: -1;
   pointer-events: none;
+  background-image: url('img/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
 }
 
 /* Category Menu sticky */
@@ -87,9 +101,10 @@ body::after {
   gap: 15px;
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.9); /* visible behind menu items */
+  background: rgba(255, 255, 255, 0.95); /* semi-transparent white */
   padding: 10px 0;
-  z-index: 20;
+  z-index: 50; /* above everything else */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .category-menu button {
@@ -104,8 +119,13 @@ body::after {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.category-menu button span[lang="zh"] { font-family: 'KaiTi', 'STKaiti', serif; }
-.category-menu button span[lang="en"] { font-family: 'Poppins', sans-serif; }
+.category-menu button span[lang="zh"] {
+  font-family: 'KaiTi', 'STKaiti', serif;
+}
+
+.category-menu button span[lang="en"] {
+  font-family: 'Poppins', sans-serif;
+}
 
 .category-menu button:hover,
 .category-menu button.active {
@@ -134,7 +154,7 @@ body::after {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   overflow: hidden;
   cursor: pointer;
-  transition: box-shadow 0.4s ease; /* only shadow animates */
+  transition: box-shadow 0.4s ease;
 }
 
 .food-item:hover {
@@ -146,13 +166,24 @@ body::after {
   height: 150px;
   object-fit: cover;
   border-bottom: 1px solid #eee;
-  transition: transform 0.4s ease; /* image animates */
+  transition: transform 0.4s ease;
 }
 
 .food-item:hover img {
   transform: scale(1.08) translateY(-8px) rotate(-1deg);
 }
 
+@media (max-width: 480px) {
+  .food-item img {
+    transform: scale(1.05);
+  }
+
+  .food-item:active img {
+    transform: scale(1.08);
+  }
+}
+
+/* Food details */
 .food-details {
   padding: 15px;
   text-align: center;
@@ -166,8 +197,13 @@ body::after {
   color: #4b007f;
 }
 
-.food-details h3 span[lang="zh"] { font-family: 'KaiTi', 'STKaiti', serif; }
-.food-details h3 span[lang="en"] { font-family: 'Poppins', sans-serif; }
+.food-details h3 span[lang="zh"] {
+  font-family: 'KaiTi', 'STKaiti', serif;
+}
+
+.food-details h3 span[lang="en"] {
+  font-family: 'Poppins', sans-serif;
+}
 
 .food-details p {
   margin: 0;
@@ -231,16 +267,26 @@ body::after {
 
 /* Responsive */
 @media (max-width: 480px) {
-  .food-item { flex: 1 1 100%; }
+  .food-item {
+    flex: 1 1 100%;
+  }
 
-  .modal-content { max-width: 95%; max-height: 80%; }
+  .modal-content {
+    max-width: 95%;
+    max-height: 80%;
+  }
 
-  .banner { height: 150px; }
+  .banner {
+    height: 150px;
+  }
 
   .banner h1 {
     font-size: 32px;
     line-height: 1.1;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 3px #fff, 1px 1px 6px #fff, 1px 1px 9px #fff;
+    text-shadow:
+      1px 1px 3px #fff,
+      1px 1px 6px #fff,
+      1px 1px 9px #fff;
   }
 }
