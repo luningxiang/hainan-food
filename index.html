@@ -22,16 +22,16 @@
   <div class="menu-section">
     <!-- Category Menu -->
     <div class="category-menu" id="category-menu">
-      <button class="active" data-category="all">
+      <button class="active" data-category="all" onclick="scrollToCategory('all')">
         <span lang="zh">全部</span> <span lang="en">All</span>
       </button>
-      <button data-category="kuih">
+      <button data-category="kuih" onclick="scrollToCategory('kuih')">
         <span lang="zh">糕点</span> <span lang="en">Kuih</span>
       </button>
-      <button data-category="bao">
+      <button data-category="bao" onclick="scrollToCategory('bao')">
         <span lang="zh">包子</span> <span lang="en">Bao</span>
       </button>
-      <button data-category="dessert">
+      <button data-category="dessert" onclick="scrollToCategory('dessert')">
         <span lang="zh">甜点</span> <span lang="en">Dessert</span>
       </button>
     </div>
@@ -48,5 +48,15 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+  function scrollToCategory(categoryId) {
+    const element = document.getElementById(categoryId);
+    if (element) {
+      const yOffset = -70; // adjust for sticky menu height
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }
+  </script>
 </body>
 </html>
