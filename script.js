@@ -8,6 +8,76 @@ const menu = [
     category: "kuih"
   },
   {
+    name_zh: "海南薏粑2",
+    name_en: "Hainanese Yi Bua",
+    price: "$1.60",
+    image: "img/hainanKuih.jpg",
+    category: "kuih"
+  },
+  {
+    name_zh: "海南薏粑3",
+    name_en: "Hainanese Yi Bua",
+    price: "$1.60",
+    image: "img/hainanKuih.jpg",
+    category: "kuih"
+  },
+  {
+    name_zh: "海南薏粑4",
+    name_en: "Hainanese Yi Bua",
+    price: "$1.60",
+    image: "img/hainanKuih.jpg",
+    category: "kuih"
+  },
+  {
+    name_zh: "海南薏粑5",
+    name_en: "Hainanese Yi Bua",
+    price: "$1.60",
+    image: "img/hainanKuih.jpg",
+    category: "kuih"
+  },
+  {
+    name_zh: "海南薏粑6",
+    name_en: "Hainanese Yi Bua",
+    price: "$1.60",
+    image: "img/hainanKuih.jpg",
+    category: "kuih"
+  },
+  {
+    name_zh: "海南薏粑7",
+    name_en: "Hainanese Yi Bua",
+    price: "$1.60",
+    image: "img/hainanKuih.jpg",
+    category: "kuih"
+  },
+  {
+    name_zh: "海南薏粑",
+    name_en: "Hainanese Yi Bua",
+    price: "$1.60",
+    image: "img/hainanKuih.jpg",
+    category: "kuih"
+  },
+  {
+    name_zh: "海南薏粑8",
+    name_en: "Hainanese Yi Bua",
+    price: "$1.60",
+    image: "img/hainanKuih.jpg",
+    category: "kuih"
+  },
+  {
+    name_zh: "海南薏粑9",
+    name_en: "Hainanese Yi Bua",
+    price: "$1.60",
+    image: "img/hainanKuih.jpg",
+    category: "kuih"
+  },
+  {
+    name_zh: "海南薏粑10",
+    name_en: "Hainanese Yi Bua",
+    price: "$1.60",
+    image: "img/hainanKuih.jpg",
+    category: "kuih"
+  },
+  {
     name_zh: "牛油馒头",
     name_en: "Butter Buns",
     price: "$1.60",
@@ -15,33 +85,222 @@ const menu = [
     category: "bao"
   },
   {
-    name_zh: "Cheeseburger",
-    name_en: "",
-    price: "$9.99",
-    image: "https://source.unsplash.com/600x400/?burger",
+    name_zh: "牛油馒头2",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
     category: "bao"
   },
   {
-    name_zh: "Caesar Salad",
-    name_en: "",
-    price: "$7.50",
-    image: "https://source.unsplash.com/600x400/?salad",
+    name_zh: "牛油馒头3",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
+    category: "bao"
+  },
+    {
+    name_zh: "牛油馒头4",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
     category: "bao"
   },
   {
-    name_zh: "Pepperoni Pizza",
-    name_en: "",
-    price: "$14.20",
-    image: "https://source.unsplash.com/600x400/?pizza",
-    category: "dessert"
+    name_zh: "牛油馒头5",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
+    category: "bao"
+  },
+    {
+    name_zh: "牛油馒头",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
+    category: "bao"
   },
   {
-    name_zh: "Ramen Noodles",
-    name_en: "",
+    name_zh: "牛油馒头6",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
+    category: "bao"
+  },
+    {
+    name_zh: "牛油馒头7",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
+    category: "bao"
+  },
+  {
+    name_zh: "牛油馒头8",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
+    category: "bao"
+  },
+    {
+    name_zh: "牛油馒头9",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
+    category: "bao"
+  },
+  {
+    name_zh: "牛油馒头10",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
+    category: "bao"
+  },
+    {
+    name_zh: "牛油馒头11",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
+    category: "bao"
+  },
+  {
+    name_zh: "牛油馒头12",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
+    category: "bao"
+  },
+    {
+    name_zh: "牛油馒头13",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
+    category: "bao"
+  },
+  {
+    name_zh: "牛油馒头",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
+    category: "bao"
+  },
+    {
+    name_zh: "牛油馒头14",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
+    category: "bao"
+  },
+  {
+    name_zh: "牛油馒头15",
+    name_en: "Butter Buns",
+    price: "$1.60",
+    image: "img/mantou.jpg",
+    category: "bao"
+  },
+  {
+    name_zh: "清补凉",
+    name_en: "Herbal Dessert",
     price: "$11.75",
     image: "https://source.unsplash.com/600x400/?ramen",
     category: "dessert"
-  }
+  },
+  {
+    name_zh: "清补凉2",
+    name_en: "Herbal Dessert",
+    price: "$11.75",
+    image: "https://source.unsplash.com/600x400/?ramen",
+    category: "dessert"
+  },
+  {
+    name_zh: "清补凉3",
+    name_en: "Herbal Dessert",
+    price: "$11.75",
+    image: "https://source.unsplash.com/600x400/?ramen",
+    category: "dessert"
+  },
+  {
+    name_zh: "清补凉4",
+    name_en: "Herbal Dessert",
+    price: "$11.75",
+    image: "https://source.unsplash.com/600x400/?ramen",
+    category: "dessert"
+  },
+  {
+    name_zh: "清补凉5",
+    name_en: "Herbal Dessert",
+    price: "$11.75",
+    image: "https://source.unsplash.com/600x400/?ramen",
+    category: "dessert"
+  },
+  {
+    name_zh: "清补凉6",
+    name_en: "Herbal Dessert",
+    price: "$11.75",
+    image: "https://source.unsplash.com/600x400/?ramen",
+    category: "dessert"
+  },
+  {
+    name_zh: "清补凉7",
+    name_en: "Herbal Dessert",
+    price: "$11.75",
+    image: "https://source.unsplash.com/600x400/?ramen",
+    category: "dessert"
+  },
+  {
+    name_zh: "清补凉8",
+    name_en: "Herbal Dessert",
+    price: "$11.75",
+    image: "https://source.unsplash.com/600x400/?ramen",
+    category: "dessert"
+  },
+  {
+    name_zh: "清补凉9",
+    name_en: "Herbal Dessert",
+    price: "$11.75",
+    image: "https://source.unsplash.com/600x400/?ramen",
+    category: "dessert"
+  },
+  {
+    name_zh: "清补凉10",
+    name_en: "Herbal Dessert",
+    price: "$11.75",
+    image: "https://source.unsplash.com/600x400/?ramen",
+    category: "dessert"
+  },
+  {
+    name_zh: "清补凉11",
+    name_en: "Herbal Dessert",
+    price: "$11.75",
+    image: "https://source.unsplash.com/600x400/?ramen",
+    category: "dessert"
+  },
+  {
+    name_zh: "清补凉12",
+    name_en: "Herbal Dessert",
+    price: "$11.75",
+    image: "https://source.unsplash.com/600x400/?ramen",
+    category: "dessert"
+  },
+  {
+    name_zh: "清补凉13",
+    name_en: "Herbal Dessert",
+    price: "$11.75",
+    image: "https://source.unsplash.com/600x400/?ramen",
+    category: "dessert"
+  },
+  {
+    name_zh: "清补凉14",
+    name_en: "Herbal Dessert",
+    price: "$11.75",
+    image: "https://source.unsplash.com/600x400/?ramen",
+    category: "dessert"
+  },
+  {
+    name_zh: "清补凉15",
+    name_en: "Herbal Dessert",
+    price: "$11.75",
+    image: "https://source.unsplash.com/600x400/?ramen",
+    category: "dessert"
+  },
 ];
 
 const menuContainer = document.getElementById('menu');
