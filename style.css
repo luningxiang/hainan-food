@@ -105,13 +105,19 @@ body::after {
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
-/* Menu container */
+/* Menu container with shared background */
 #menu {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  padding: 20px;
+  padding: 40px 20px;
+
+  /* shared background */
+  background-image: url('img/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Food item card */
