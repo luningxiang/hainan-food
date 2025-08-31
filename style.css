@@ -31,7 +31,7 @@ body::after {
   position: sticky;
   top: 0; /* sticks to top */
   width: 100%;
-  height: 250px;
+  height: 200px;
   overflow: hidden;
   text-align: center;
   z-index: 20; /* above watermark and menu */
