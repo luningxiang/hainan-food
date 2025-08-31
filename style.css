@@ -26,24 +26,23 @@ body::after {
   pointer-events: none;
 }
 
-/* Banner + Category Menu combined (sticky at top) */
+/* Banner */
 .banner {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 280px; /* control banner height */
-  background-image: url('img/banner.jpeg'); /* use CSS background */
+  height: 280px;
+  background-image: url('img/banner.jpeg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
   z-index: 20;
-
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* keep title/menu at top */
+  justify-content: flex-start;
   align-items: center;
-  padding-top: 40px; /* add spacing from top */
+  padding-top: 40px;
 }
 
 /* Banner title with solid purple + glow */
@@ -70,13 +69,43 @@ body::after {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Category Menu inside banner */
-.banner .category-menu {
-  margin-top: 20px;
+/* Menu Section wrapper for watermark */
+.menu-section {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Watermark background (fixed, behind menu) */
+.menu-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* Category Menu sticky inside menu-section */
+.category-menu {
   display: flex;
   justify-content: center;
   gap: 15px;
-  z-index: 21;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  background: transparent; /* let watermark show */
+  padding: 10px 0;
 }
 
 .category-menu button {
@@ -105,19 +134,13 @@ body::after {
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
-/* Menu container with shared background */
+/* Menu container */
 #menu {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   padding: 40px 20px;
-
-  /* shared background */
-  background-image: url('img/background.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 /* Food item card */
@@ -148,12 +171,10 @@ body::after {
   transition: transform 0.4s ease;
 }
 
-/* Hover on desktop */
 .food-item:hover img {
   transform: scale(1.08);
 }
 
-/* Mobile touch scaling */
 @media (max-width: 480px) {
   .food-item img {
     transform: scale(1.05);
@@ -171,7 +192,6 @@ body::after {
   flex-grow: 1;
 }
 
-/* Menu item names */
 .food-details h3 {
   margin: 10px 0 5px;
   font-size: 22px;
@@ -186,7 +206,6 @@ body::after {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Price */
 .food-details p {
   margin: 0;
   font-size: 18px;
@@ -259,7 +278,7 @@ body::after {
   }
 
   .banner {
-    height: 220px; /* smaller on mobile */
+    height: 220px;
   }
 
   .banner h1 {
