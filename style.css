@@ -16,12 +16,12 @@ body::after {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* taller watermark */
+  height: 100%;
   background-image: url('img/background.jpeg');
-  background-size: cover; /* fill area */
+  background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
-  opacity: 0.1; /* subtle watermark effect */
+  opacity: 0.1;
   z-index: 0;
   pointer-events: none;
 }
@@ -45,7 +45,7 @@ body::after {
   padding-top: 40px;
 }
 
-/* Banner title with solid purple + glow */
+/* Banner title */
 .banner h1 {
   margin: 0;
   font-size: 40px;
@@ -53,21 +53,11 @@ body::after {
   letter-spacing: 1.5px;
   font-weight: bold;
   color: #4b007f;
-  text-shadow:
-    0 0 3px #fff,
-    0 0 6px #fff,
-    0 0 9px #fff,
-    0 0 12px #fff,
-    0 0 15px #fff;
+  text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #fff, 0 0 15px #fff;
 }
 
-.banner h1 span[lang="zh"] {
-  font-family: 'KaiTi', 'STKaiti', serif;
-}
-
-.banner h1 span[lang="en"] {
-  font-family: 'Poppins', sans-serif;
-}
+.banner h1 span[lang="zh"] { font-family: 'KaiTi', 'STKaiti', serif; }
+.banner h1 span[lang="en"] { font-family: 'Poppins', sans-serif; }
 
 /* Menu Section wrapper for watermark */
 .menu-section {
@@ -75,10 +65,10 @@ body::after {
   padding-top: 20px;
   padding-bottom: 40px;
   z-index: 10;
-  overflow: hidden;
+  overflow: visible; /* sticky works now */
 }
 
-/* Watermark background (fixed, behind menu) */
+/* Watermark background (behind menu items) */
 .menu-section::before {
   content: "";
   position: absolute;
@@ -86,20 +76,20 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* <--- this ensures it’s behind the content */
-  pointer-events: none; /* <--- also ensures clicks pass through */
+  z-index: -1;
+  pointer-events: none;
 }
 
-/* Category Menu sticky inside menu-section */
+/* Category Menu sticky */
 .category-menu {
   display: flex;
   justify-content: center;
   gap: 15px;
-  z-index: 1;
   position: sticky;
   top: 0;
-  background: transparent; /* let watermark show */
+  background: rgba(255, 255, 255, 0.9); /* visible behind menu items */
   padding: 10px 0;
+  z-index: 20;
 }
 
 .category-menu button {
@@ -114,13 +104,8 @@ body::after {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.category-menu button span[lang="zh"] {
-  font-family: 'KaiTi', 'STKaiti', serif;
-}
-
-.category-menu button span[lang="en"] {
-  font-family: 'Poppins', sans-serif;
-}
+.category-menu button span[lang="zh"] { font-family: 'KaiTi', 'STKaiti', serif; }
+.category-menu button span[lang="en"] { font-family: 'Poppins', sans-serif; }
 
 .category-menu button:hover,
 .category-menu button.active {
@@ -149,11 +134,11 @@ body::after {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   overflow: hidden;
   cursor: pointer;
-  transition: box-shadow 0.4s ease; /* removed transform from card */
+  transition: box-shadow 0.4s ease; /* only shadow animates */
 }
 
 .food-item:hover {
-  box-shadow: 0 12px 24px rgba(0,0,0,0.3); /* only shadow animates */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
 }
 
 .food-item img {
@@ -161,21 +146,11 @@ body::after {
   height: 150px;
   object-fit: cover;
   border-bottom: 1px solid #eee;
-  transition: transform 0.4s ease; /* image transform only */
+  transition: transform 0.4s ease; /* image animates */
 }
 
 .food-item:hover img {
-  transform: scale(1.08) translateY(-8px) rotate(-1deg); /* image moves & rotates */
-}
-
-@media (max-width: 480px) {
-  .food-item img {
-    transform: scale(1.05);
-  }
-
-  .food-item:active img {
-    transform: scale(1.08);
-  }
+  transform: scale(1.08) translateY(-8px) rotate(-1deg);
 }
 
 .food-details {
@@ -191,13 +166,8 @@ body::after {
   color: #4b007f;
 }
 
-.food-details h3 span[lang="zh"] {
-  font-family: 'KaiTi', 'STKaiti', serif;
-}
-
-.food-details h3 span[lang="en"] {
-  font-family: 'Poppins', sans-serif;
-}
+.food-details h3 span[lang="zh"] { font-family: 'KaiTi', 'STKaiti', serif; }
+.food-details h3 span[lang="en"] { font-family: 'Poppins', sans-serif; }
 
 .food-details p {
   margin: 0;
@@ -261,26 +231,16 @@ body::after {
 
 /* Responsive */
 @media (max-width: 480px) {
-  .food-item {
-    flex: 1 1 100%;
-  }
+  .food-item { flex: 1 1 100%; }
 
-  .modal-content {
-    max-width: 95%;
-    max-height: 80%;
-  }
+  .modal-content { max-width: 95%; max-height: 80%; }
 
-  .banner {
-    height: 150px;
-  }
+  .banner { height: 150px; }
 
   .banner h1 {
     font-size: 32px;
     line-height: 1.1;
     letter-spacing: 1px;
-    text-shadow:
-      1px 1px 3px #fff,
-      1px 1px 6px #fff,
-      1px 1px 9px #fff;
+    text-shadow: 1px 1px 3px #fff, 1px 1px 6px #fff, 1px 1px 9px #fff;
   }
 }
