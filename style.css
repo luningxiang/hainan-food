@@ -71,7 +71,7 @@ body::after {
   padding: 12px 0;
   z-index: 25;
   border-radius: 12px;
-  margin-bottom: 10px;
+  width: 100%;
 }
 
 .category-menu button {
