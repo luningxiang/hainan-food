@@ -149,12 +149,11 @@ body::after {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease; /* removed transform from card */
 }
 
 .food-item:hover {
-  transform: translateY(-8px) rotate(-1deg);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3); /* only shadow animates */
 }
 
 .food-item img {
@@ -162,11 +161,11 @@ body::after {
   height: 150px;
   object-fit: cover;
   border-bottom: 1px solid #eee;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease; /* image transform only */
 }
 
 .food-item:hover img {
-  transform: scale(1.08);
+  transform: scale(1.08) translateY(-8px) rotate(-1deg); /* image moves & rotates */
 }
 
 @media (max-width: 480px) {
