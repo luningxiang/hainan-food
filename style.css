@@ -63,6 +63,7 @@ body::after {
   padding-bottom: 40px;
   overflow: visible;
   background: none; /* same as food items */
+  z-index: 10;
 }
 
 /* Sticky Category Menu */
@@ -71,10 +72,10 @@ body::after {
   justify-content: center;
   gap: 15px;
   position: sticky;
-  top: 0;
+  top: 180px;
   background: none; /* match food items */
   padding: 10px 0;
-  z-index: 10;
+  z-index: 20;
 }
 
 .category-menu button {
